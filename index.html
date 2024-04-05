@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+        <script
+			src="https://kit.fontawesome.com/d5419b392a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<div class="menu">
+			<h1 class="menu-title"><i class="fas fa-sticky-note"> MyNotes</i></h1>
+			<div class="menu-buttons">
+				<button class="add icon"><i class="fas fa-plus"></i> Dodaj</button>
+				<button class="delete-all icon"><i class="fas fa-trash-alt"></i> Usuń wszystkie</button>
+			</div>
+		</div>
+
+        <div class="note-area">
+			<div class="note">
+				<div class="note-header">
+					<h3 class="note-header-title">Zakupy</h3>
+					<button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+					<button class="delete-note">
+						<i class="fa-solid fa-delete-left"></i>
+					</button>
+				</div>
+				<div class="note-body">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cumque.
+				</div>
+			</div>
+			<!-- <div class="note">
+				<div class="note-header">
+					<h3 class="note-header-title">Zakupy</h3>
+					<button class="delete-note">
+						<i class="fas fa-times icon-note"></i>
+					</button>
+				</div>
+				<div class="note-body">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, tempora.
+				</div>
+			</div> -->
+		</div>
+
+        <div class="note-panel add-panel">
+			<h2 class="note-panel-title">
+				Dodaj notatkę
+			</h2>
+			<label for="category">Wybierz kategorię</label>
+			<select id="category" onchange="selectValue()">
+				<option value="0" selected disabled>-- Wybierz kategorię --</option>
+				<option value="1">Zakupy</option>
+				<option value="1">Praca</option>
+				<option value="1">Inne</option>
+			</select>
+			<label for="note">Wpisz treść notatki</label>
+            <textarea class="addpanel-note-area" id="note"></textarea>
+			
+			<p class="error-addpanel-text error-text">Uzupełnij wszystkie pola!</p>
+			<div class="buttons-area">
+				<button class="add-note icon"><i class="fas fa-save"></i> Dodaj</button>
+				<button class="cancel icon"><i class="fas fa-times icon-note"></i>Anuluj</button>
+			</div>
+		</div>
+        <div class="note-panel edit-panel">
+			<h2 class="note-panel-title">
+				Dodaj notatkę
+			</h2>
+			<label for="category">Wybierz kategorię</label>
+			<select id="category" onchange="selectValue()">
+				<option value="0" selected disabled>-- Wybierz kategorię --</option>
+				<option value="1">Zakupy</option>
+				<option value="1">Praca</option>
+				<option value="1">Inne</option>
+			</select>
+			<label for="note">Wpisz treść notatki</label>
+            <textarea class="editpanel-note-area" id="note"></textarea>
+			
+			<p class="error-editpanel-text error-text">Uzupełnij wszystkie pola!</p>
+			<div class="buttons-area">
+				<button class="save icon"><i class="fas fa-save"></i> Zapisz</button>
+				<!-- <button class="cancel icon"><i class="fas fa-times icon-note"></i>Anuluj</button> -->
+			</div>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
