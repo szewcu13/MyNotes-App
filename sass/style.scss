@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 // .montserrat-font {
@@ -12,151 +12,188 @@
 //   }
 
 body {
-    height: 100vh;
-    font-family: "Montserrat", sans-serif;
-    background-color: rgb(243, 243, 243);
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(243, 243, 243);
 }
 
-
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    // height: 120px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+	// height: 120px;
 }
 
 .menu-title {
-    font-size: 46px;
+	font-size: 46px;
 }
 
 .icon {
-    margin-right: 10px;
-    font-size: 18px;
-    padding: 12px 25px;
-    font-weight: bold;
-    background: none;
-    border: 1px solid rgb(164, 107, 0);
-    border-radius: 8px;
-    transition: background-color .6s;
-    cursor: pointer;
+	margin-right: 10px;
+	font-size: 18px;
+	padding: 12px 25px;
+	font-weight: bold;
+	background: none;
+	border: 1px solid rgb(164, 107, 0);
+	border-radius: 8px;
+	transition: background-color 0.6s;
+	cursor: pointer;
 }
 
 .icon:hover {
-    background-color: rgb(250, 185, 63);
+	background-color: rgb(250, 185, 63);
 }
 
-
 .note-area {
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
-    padding: 20px;
+	display: flex;
+	align-items: start;
+	flex-wrap: wrap;
+	padding: 20px;
 }
 
 .note {
-    margin: 40px 20px;
-    width: 250px;
-    background-color: rgb(250, 185, 63);
-    border-radius: 4px;
-    border: 1px solid black;
+	margin: 40px 20px;
+	width: 250px;
+	background-color: rgb(250, 185, 63);
+	border-radius: 4px;
+	border: 1px solid black;
 }
 
 .note-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 30px;
+	background: none;
+	border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .note-header-title {
-    font-size: 20px;
+	font-size: 20px;
 }
 
-.delete-note {
-    margin-left: 20px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+
+.settings {
+	position: relative;
 }
 
-.edit {
-    margin-left: 50px;
-    font-size: 18px;
-    background: none;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+.settings-icon {
+	background: none;
+	border: none;
+	font-size: 18px;
+}
+
+.settings  .settings-panel {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	padding: 12px;
+	bottom: 0;
+	list-style: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	transform: scale(0);
+	transform-origin: bottom left;
+	transition: transform .3s ease;
+	background-color: rgb(250, 185, 63);
+	box-shadow: 0 0 6px rgba(0, 0, 0, .15);
+}
+
+
+.settings:hover .settings-panel{
+	transform: scale(1);
+}
+
+.settings .settings-panel li {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 20px;
+	cursor: pointer;
+}
+
+.settings .settings-panel li:first-child {
+	margin-bottom: 12px;
+}
+
+.settings .settings-panel li i {
+	margin-right: 10px;
 }
 
 .note-body {
-    padding: 25px;
-    font-size: 18px;
+	padding: 25px;
+	font-size: 18px;
+
+	hr {
+		border: 1px solid rgb(209, 137, 4);
+	}
 }
 
+.note-body-text {
+	margin-bottom: 15px;
+}
+
+.note-body-date {
+	margin-top: 10px;
+	font-size: 16px;
+	text-align: right;
+}
 
 .note-panel {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 40px 20px;
-    width: 600px;
-    transform: translate(-50%, -50%);
-    border: 5px solid rgb(209, 137, 4);
-    background-color: #fff;
-    box-shadow: 0 0 5px black;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	padding: 40px 20px;
+	width: 600px;
+	transform: translate(-50%, -50%);
+	border: 5px solid rgb(209, 137, 4);
+	background-color: #fff;
+	box-shadow: 0 0 5px black;
 }
 
 .note-panel-title {
-    font-size: 32px;
-    margin-bottom: 10px;
+	font-size: 32px;
+	margin-bottom: 10px;
 }
 
 label {
-    font-size: 20px;
-    margin: 12px;
+	font-size: 20px;
+	margin: 12px;
+	font-weight: bold;
 }
 
-select {
-    margin-bottom: 15px;
-    width: 80%;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-}
-
-option {
-    font-size: 16px;
+input {
+	margin-bottom: 15px;
+	width: 80%;
+	padding: 8px 20px;
+	font-size: 18px;
 }
 
 textarea {
-    font-size: 18px;
-    max-width: 80%;
-    min-width: 80%;
-    max-height: 450px;
-    margin-bottom: 20px;
+	padding: 8px 20px;
+	margin-bottom: 20px;
+	max-width: 80%;
+	max-height: 450px;
+	min-width: 80%;
+	font-size: 18px;
 }
 
 .error-text {
-    font-weight: bold;
-    color: red;
-    font-size: 18px;
-    visibility: hidden;
+	font-weight: bold;
+	color: red;
+	font-size: 18px;
+	visibility: hidden;
 }
 
 .buttons-area {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .icon-note {
-    margin-right: 5px;
+	margin-right: 5px;
 }
-
